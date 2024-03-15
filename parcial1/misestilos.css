@@ -23,3 +23,19 @@ span ul li{
     font-weight: 700;
 
 }
+#boton{
+    background-color: lightcoral;
+    border: none;
+    font-size: 30px;
+    width: 500px;
+    padding: 20px;
+    color: white;
+}
+
+.link{
+    color: purple;
+
+}
+a:hover{
+    color: red;
+}
