@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 29, 2024 at 03:05 AM
--- Server version: 10.1.39-MariaDB
--- PHP Version: 7.3.5
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 05-06-2024 a las 02:54:26
+-- Versión del servidor: 10.1.39-MariaDB
+-- Versión de PHP: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `spotify`
+-- Base de datos: `spotify`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `artista`
+-- Estructura de tabla para la tabla `artista`
 --
 
 CREATE TABLE `artista` (
@@ -34,10 +34,26 @@ CREATE TABLE `artista` (
   `descripcion` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `artista`
+--
+
+INSERT INTO `artista` (`id`, `nombre`, `descripcion`) VALUES
+(2, 'TWICE', 'TWICE es un grupo de chicas de K-Pop producido por JYP Entertainment a través del programa de telerrealidad [SIXTEEN].   El grupo está compuesto por 9 miembros: NAYEON, JEONGYEON, MOMO, SANA, JIHYO, MINA, DAHYUN, CHAEYOUNG y TZUYU.   Debutó el 20 de octubre de 2015.'),
+(4, 'Kenia OS', 'Kenia Guadalupe Flores Osuna, mejor conocida como Kenia Os y \"La mexa que tiene a to\' el mundo loco\" & \"La OG\" nació en Mazatlán, Sinaloa, México el 15 de julio de 1999.'),
+(5, 'Los Ángeles Azules ', 'Family band Los Ángeles Azules are the progenitors of \"Cumbia Sonidera,\" an urban, gritty, working-class expansion of the Cumbia Colombiana style that exploded in Mexico during the 1970s. '),
+(6, 'Caifanes', 'Caifanes ha vivido intensa y apasionadamente su camino desde 1986   La evolución y los cambios siempre han sido y seguirán siendo parte de su historia, pero sus constantes permanecen: la música y la entrañable magia que varias generaciones comparten y llevan tatuadas en el corazón'),
+(7, 'Marc Anthony', 'Marc Anthony es un cantante, bailarín, actor, compositor, productor y diseñador de moda. Es indiscutiblemente una de las estrellas pop más importantes del mundo y el artista de salsa con mayores ventas de todos los tiempos, considerado el único heredero legítimo del trono del fallecido Héctor Lavoe'),
+(8, 'Snoop Dogg', 'Snoop Dogg, una de las figuras más icónicas que surgió de la era del G-funk de principios de los 90, evolucionó más allá de sus inicios en el gangsta rap para convertirse en un adorable elemento de la cultura pop con incursiones en la televisión, el cine, el entrenamiento de fútbol y la lucha libre.'),
+(9, 'Metallica', 'Metallica se formó en 1981 por el baterista Lars Ulrich y el guitarrista y vocalista James Hetfield y se ha convertido en una de las bandas de rock más influyentes y comercialmente exitosas de la historia, habiendo vendido 120 millones de álbumes en todo el mundo.'),
+(10, 'Ludwig van Beethoven', 'Los acontecimientos de la vida de Beethoven son materia de leyenda romántica, evocando imágenes del creador solitario agitando su puño contra el Destino y finalmente superándolo a través de un esfuerzo supremo de voluntad creativa.\r\n'),
+(11, 'Ray Charles', 'Ray Charles fue el músico más responsable del desarrollo de la música soul. A los cantantes les gusta \r\nSam Cooke y Jackie Wilson también hicieron mucho para ser pioneros, pero Charles hizo más para idear una nueva forma de pop negro fusionó el R&B de los años 50 con voces inspiradas en el gospel.'),
+(12, 'Gondwana', 'GONDWANA es uno de los grupos más importantes del Reggae en Latinoamérica, con una carrera de 35 años de constante ascenso y crecimiento sin pausas.');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `artistas_canciones`
+-- Estructura de tabla para la tabla `artistas_canciones`
 --
 
 CREATE TABLE `artistas_canciones` (
@@ -49,7 +65,7 @@ CREATE TABLE `artistas_canciones` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `canciones`
+-- Estructura de tabla para la tabla `canciones`
 --
 
 CREATE TABLE `canciones` (
@@ -61,10 +77,28 @@ CREATE TABLE `canciones` (
   `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `canciones`
+--
+
+INSERT INTO `canciones` (`id`, `nombre`, `activo`, `genero_id`, `duracion`, `fecha`) VALUES
+(5, 'Malas Decisiones', 1, 1, '00:02:19', '2022-10-26'),
+(6, 'La invitación ', 1, 1, '00:02:29', '2022-10-27'),
+(7, 'Good Boy', 1, 1, '00:02:03', '2022-10-27'),
+(8, 'Mía mía', 1, 1, '00:02:10', '2022-09-30'),
+(9, 'Ojo X Ojo', 1, 1, '00:03:01', '2023-10-23'),
+(10, 'Cócteles', 1, 1, '00:02:17', '2020-05-01'),
+(11, 'Año Sabático ', 1, 1, '00:02:42', '2022-10-27'),
+(12, 'Llévatelo', 1, 1, '00:02:23', '2022-03-24'),
+(13, 'La noche', 1, 1, '03:04:00', '2021-09-14'),
+(14, 'Soledad', 1, 1, '03:14:00', '2024-03-22'),
+(15, 'Cambios ', 1, 1, '02:43:00', '2024-03-22'),
+(16, 'Se Fue La Luz', 1, 1, '02:39:00', '2022-03-23');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `favoritas`
+-- Estructura de tabla para la tabla `favoritas`
 --
 
 CREATE TABLE `favoritas` (
@@ -76,7 +110,7 @@ CREATE TABLE `favoritas` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `generos`
+-- Estructura de tabla para la tabla `generos`
 --
 
 CREATE TABLE `generos` (
@@ -84,10 +118,26 @@ CREATE TABLE `generos` (
   `nombre` varchar(50) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `generos`
+--
+
+INSERT INTO `generos` (`id`, `nombre`) VALUES
+(1, 'pop'),
+(2, 'Hip hop'),
+(3, 'Cumbia'),
+(4, 'Rock'),
+(5, 'Salsa'),
+(6, 'K-pop'),
+(7, 'Metal'),
+(8, 'Clásica'),
+(9, 'Jazz'),
+(10, 'Reggae');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `membresias`
+-- Estructura de tabla para la tabla `membresias`
 --
 
 CREATE TABLE `membresias` (
@@ -96,10 +146,19 @@ CREATE TABLE `membresias` (
   `precio` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `membresias`
+--
+
+INSERT INTO `membresias` (`id`, `descripcion`, `precio`) VALUES
+(1, ' Premium Individual', 129),
+(2, ' Premium Duo ', 169),
+(3, 'Premium Familiar', 199);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `playlist`
+-- Estructura de tabla para la tabla `playlist`
 --
 
 CREATE TABLE `playlist` (
@@ -114,7 +173,7 @@ CREATE TABLE `playlist` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `playlist_canciones`
+-- Estructura de tabla para la tabla `playlist_canciones`
 --
 
 CREATE TABLE `playlist_canciones` (
@@ -127,7 +186,7 @@ CREATE TABLE `playlist_canciones` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -138,17 +197,33 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indexes for dumped tables
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `membresia_id`) VALUES
+(1, 'Chelssy Zazueta Díaz', 'chelssyzazueta@gmail.com', 1),
+(2, 'Gloria Azucena Garcia Luna', 'garcialuna@gmail.com', 2),
+(3, 'Pablo Eduardo López Mendoza', 'eduardomendozaa@gmail.com', 3),
+(4, 'Paúl Gerardo Jiménez Quintero ', 'paulgerardo12@gmail.com', 3),
+(5, 'Karina Ángulo Escalante ', 'karinaangulo457@gmail.com', 2),
+(6, 'Manuel Hernández Martínez', 'manuelitomartinez@gmail.com', 1),
+(7, 'María Guadalupe Reyes Moreno', 'mariaareyes8@gmail.com', 3),
+(8, 'Juan Carlos Aguilar Zamora', 'zamoraaguilar@gmail.com', 2),
+(9, 'Jacqueline Fernández Millán ', 'jacquefernandez@gmail.com', 3),
+(10, 'Jared Armando Delgado Treviño', 'armandodelgadoo@gmail.com', 1);
+
+--
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `artista`
+-- Indices de la tabla `artista`
 --
 ALTER TABLE `artista`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `artistas_canciones`
+-- Indices de la tabla `artistas_canciones`
 --
 ALTER TABLE `artistas_canciones`
   ADD PRIMARY KEY (`id`),
@@ -156,14 +231,14 @@ ALTER TABLE `artistas_canciones`
   ADD KEY `cancion_id` (`cancion_id`);
 
 --
--- Indexes for table `canciones`
+-- Indices de la tabla `canciones`
 --
 ALTER TABLE `canciones`
   ADD PRIMARY KEY (`id`),
   ADD KEY `genero_id` (`genero_id`);
 
 --
--- Indexes for table `favoritas`
+-- Indices de la tabla `favoritas`
 --
 ALTER TABLE `favoritas`
   ADD PRIMARY KEY (`id`),
@@ -171,26 +246,26 @@ ALTER TABLE `favoritas`
   ADD KEY `cancion_id` (`cancion_id`);
 
 --
--- Indexes for table `generos`
+-- Indices de la tabla `generos`
 --
 ALTER TABLE `generos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `membresias`
+-- Indices de la tabla `membresias`
 --
 ALTER TABLE `membresias`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `playlist`
+-- Indices de la tabla `playlist`
 --
 ALTER TABLE `playlist`
   ADD PRIMARY KEY (`id`),
   ADD KEY `usuarios_id` (`usuarios_id`);
 
 --
--- Indexes for table `playlist_canciones`
+-- Indices de la tabla `playlist_canciones`
 --
 ALTER TABLE `playlist_canciones`
   ADD PRIMARY KEY (`id`),
@@ -199,102 +274,102 @@ ALTER TABLE `playlist_canciones`
   ADD KEY `usuario_id` (`usuario_id`);
 
 --
--- Indexes for table `usuarios`
+-- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
   ADD KEY `membresia_id` (`membresia_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `artista`
+-- AUTO_INCREMENT de la tabla `artista`
 --
 ALTER TABLE `artista`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `artistas_canciones`
+-- AUTO_INCREMENT de la tabla `artistas_canciones`
 --
 ALTER TABLE `artistas_canciones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `canciones`
+-- AUTO_INCREMENT de la tabla `canciones`
 --
 ALTER TABLE `canciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `favoritas`
+-- AUTO_INCREMENT de la tabla `favoritas`
 --
 ALTER TABLE `favoritas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `generos`
+-- AUTO_INCREMENT de la tabla `generos`
 --
 ALTER TABLE `generos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `membresias`
+-- AUTO_INCREMENT de la tabla `membresias`
 --
 ALTER TABLE `membresias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `playlist`
+-- AUTO_INCREMENT de la tabla `playlist`
 --
 ALTER TABLE `playlist`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `playlist_canciones`
+-- AUTO_INCREMENT de la tabla `playlist_canciones`
 --
 ALTER TABLE `playlist_canciones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `artistas_canciones`
+-- Filtros para la tabla `artistas_canciones`
 --
 ALTER TABLE `artistas_canciones`
   ADD CONSTRAINT `artistas_canciones_ibfk_1` FOREIGN KEY (`artista_id`) REFERENCES `artista` (`id`),
   ADD CONSTRAINT `artistas_canciones_ibfk_2` FOREIGN KEY (`cancion_id`) REFERENCES `canciones` (`id`);
 
 --
--- Constraints for table `canciones`
+-- Filtros para la tabla `canciones`
 --
 ALTER TABLE `canciones`
   ADD CONSTRAINT `canciones_ibfk_1` FOREIGN KEY (`genero_id`) REFERENCES `generos` (`id`);
 
 --
--- Constraints for table `favoritas`
+-- Filtros para la tabla `favoritas`
 --
 ALTER TABLE `favoritas`
   ADD CONSTRAINT `favoritas_ibfk_1` FOREIGN KEY (`cancion_id`) REFERENCES `canciones` (`id`),
   ADD CONSTRAINT `favoritas_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
 
 --
--- Constraints for table `playlist`
+-- Filtros para la tabla `playlist`
 --
 ALTER TABLE `playlist`
   ADD CONSTRAINT `playlist_ibfk_1` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`);
 
 --
--- Constraints for table `playlist_canciones`
+-- Filtros para la tabla `playlist_canciones`
 --
 ALTER TABLE `playlist_canciones`
   ADD CONSTRAINT `playlist_canciones_ibfk_1` FOREIGN KEY (`cancion_id`) REFERENCES `canciones` (`id`),
@@ -302,7 +377,7 @@ ALTER TABLE `playlist_canciones`
   ADD CONSTRAINT `playlist_canciones_ibfk_3` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
 
 --
--- Constraints for table `usuarios`
+-- Filtros para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`membresia_id`) REFERENCES `membresias` (`id`);
