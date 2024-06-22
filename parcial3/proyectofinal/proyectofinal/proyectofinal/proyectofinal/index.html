@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final parcial #3</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.7.1.js"></script>
+</head>
+<body style="background-color: #B1A8E5;">
+
+  <div class="container">
+    <h1 style="margin-left: 80px;">Proyecto final Parcial 3</h1>
+    <div class="row">
+      <div class="col">
+        <p style="margin-left: 80px;"><b>Lugo Sánchez Estrella<b><p>
+        <p style="margin-left: 80px;"><b>Consulta #1. Obtener el listado de todos los alumnos de la facultad.<b><p>
+        
+        <h3 class="card" style="color: blue; background-color: #B1A8E5; margin-left: 80px;">SELECT * FROM alumno;</h3>
+        <center><img src="consulta1.png" alt="" class="img-fluid" width="950px" height="950px"></center>
+        <br>
+        <p style="margin-left: 80px;"><b>Consulta #2. Obtener listado de cursos(nombre) y las asignatura que tiene.<b><p>
+        <h3 class="card" style="color: blue; background-color: #B1A8E5; margin-left: 80px;">SELECT curso.nombreDescriptivo, asignatura.nombre 
+          FROM curso
+          INNER JOIN asignatura ON curso.idCurso = asignatura.curso</h3>
+          <center><img src="consulta2.png" alt="" class="img-fluid" width="950px" height="950px"></center>
+          <br>
+
+          
+              <p style="margin-left: 80px;"><b>Consulta #3. Obtener listado (Nombre y apellido) de alumnos que tengan beca.<b><p>  
+                <h3 class="card" style="color: blue; background-color: #B1A8E5; margin-left: 80px;">
+                 
+                SELECT alumno.nombre, alumno.apellido1 
+                FROM alumno 
+                WHERE beca LIKE 'si'</h3>
+                
+                  <center><img src="consulta3.png" alt="" class="img-fluid" width="950px" height="950px"></center>
+                  <br>
+    
+                  <p style="margin-left: 80px;"><b>Consulta #4. Obtener listado de profesores(nombre,apellido), y su numero de contacto.
+                    <b><p>  
+                  <h3 class="card" style="color: blue; background-color: #B1A8E5; margin-left: 80px;">
+                 
+                  SELECT profesor.nombre, profesor.apellido1, tlfcontactoprof.telefono FROM profesor 
+                  INNER JOIN tlfcontactoprof ON profesor.idProfesor=tlfcontactoprof.idProfesor
+                  </h3>
+                  <center><img src="consulta4.png" alt="" class="img-fluid" width="950px" height="950px"></center>
+
+                  <br>
+    
+                  <p style="margin-left: 80px;"><b>Consulta #5. Obtener listado de alumnos(todos los campos) que están inscritos a la asignatura de programación AS009
+                  </b></p>
+                      <h3 class="card" style="color: blue; background-color: #B1A8E5; margin-left: 80px;"></h3>  
+                  SELECT alumno.*, asignatura.nombre 
+                  FROM alumno
+                  INNER JOIN matricula ON matricula.idAlumno=alumno.idAlumno
+                  INNER JOIN asignatura ON asignatura.idAsignatura=matricula.idAsignatura
+
+                  WHERE asignatura.idAsignatura LIKE 'AS009';
+                  </h3>
+                  <center><img src="consulta5.png" alt="" class="img-fluid" width="950px" height="950px"></center>
+
+    
+    
+
+    </div>
+  </div>
+ <script src="js/bootstrap.js"></script>
+</body>
+</html>
