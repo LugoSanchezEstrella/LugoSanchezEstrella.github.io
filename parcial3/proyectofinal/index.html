@@ -59,6 +59,25 @@
                   WHERE asignatura.idAsignatura LIKE 'AS009';
                   </h3>
                   <center><img src="consulta5.png" alt="" class="img-fluid" width="950px" height="950px"></center>
+                  <p style="margin-left: 80px;"><b>Consulta #6. Obtener listado de profesores y asignaturas que imparten
+                  </b></p>
+
+                  <h3 class="card" style="color: blue; background-color: #B1A8E5; margin-left: 80px;"></h3>  
+                  SELECT p.idProfesor, p.nombre AS nombre_profesor, p.apellido1 AS apellido1_profesor, p.apellido2 AS apellido2_profesor, a.idAsignatura, a.nombre AS nombre_asignatura
+                  FROM 
+                  profesor p
+                  JOIN
+                  impartir i ON p.idProfesor=i.idProfesor
+                  JOIN 
+                  asignatura a ON i.idAsignatura=a.idAsignatura
+                  ORDER BY
+                  p.idProfesor, a.idAsignatura;
+
+                 
+                  </h3
+                  <center><img src="consulta6.png" alt="" class="img-fluid" width="950px" height="950px"></center>
+                  
+
 
     
     
