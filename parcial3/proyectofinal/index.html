@@ -83,15 +83,61 @@
 
                     <p style="margin-left: 80px;"><b>Consulta #8. Obtener listado de alumnos que les da clase con ID PR048(JOSE MANUEL), sin importar en que asignatura esté inscrito.
                     </b></p>
+                
 
                     <h3 class="card" style="color: blue; background-color: #B1A8E5; margin-left: 80px;">  
                       SELECT a.idAlumno, a.nombre, a.apellido1, a.apellido2, a.email FROM alumno a JOIN matricula m ON a.idAlumno = m.idAlumno JOIN impartir i ON m.idAsignatura = i.idAsignatura WHERE i.idProfesor = 'PR048';
                       </h3>
+                      <center><img src="consulta8.png" alt="" class="img-fluid" width="950px" height="950px"></center>
+
+                      <p style="margin-left: 80px;"><b>Consulta #9. Obtener listado de cursos, con asignatura, y el maestro que las imparte.
+
+                      </b></p>
+
+                      <h3 class="card" style="color: blue; background-color: #B1A8E5; margin-left: 80px;">  
+                        SELECT curso.idCurso, curso.nombreDescriptivo 
+                        AS nombre_curso, asignatura.idAsignatura, 
+                        asignatura.nombre AS nombre_asignatura, 
+                        profesor.idProfesor, profesor.nombre AS nombre_profesor,
+                         profesor.apellido1 AS apellido1_profesor, 
+                         profesor.apellido2 AS apellido2_profesor 
+                         FROM curso JOIN asignatura ON curso.idCurso = asignatura.curso
+                         JOIN impartir ON asignatura.idAsignatura = impartir.idAsignatura JOIN profesor ON impartir.idProfesor = profesor.idProfesor
+                         ORDER BY curso.idCurso, asignatura.idAsignatura, profesor.idProfesor;
+      
+                        </h3>
+                        <center><img src="consulta9.png" alt="" class="img-fluid" width="950px" height="950px"></center>
+
+                        <p style="margin-left: 80px;"><b>Consulta #10.Obtener listado de alumnos, con asignaturas que cursa, profesor que las imparte y al curso al que pertenece.
+
+                        </b></p>
+
+                        <h3 class="card" style="color: blue; background-color: #B1A8E5; margin-left: 80px;">  
+                          SELECT alumno.idAlumno,alumno.nombre AS nombre_alumno,<br>
+                          alumno.apellido1 AS apellido1_alumno,alumno.apellido2 AS apellido2_alumno,<br>
+                          asignatura.idAsignatura,asignatura.nombre AS nombre_asignatura,profesor.idProfesor,<br>
+                          profesor.nombre AS nombre_profesor,profesor.apellido1 AS apellido1_profesor, 
+                      profesor.apellido2 AS apellido2_profesor, 
+                      curso.idCurso, 
+                          
+                      curso.nombreDescriptivo AS nombre_curso 
+                      FROM alumno 
+                      JOIN matricula ON alumno.idAlumno = matricula.idAlumno 
+                      JOIN asignatura ON matricula.idAsignatura = asignatura.idAsignatura 
+                      JOIN impartir ON asignatura.idAsignatura = impartir.idAsignatura 
+                      JOIN profesor ON impartir.idProfesor = profesor.idProfesor 
+                      JOIN curso ON asignatura.curso = curso.idCurso 
+                      ORDER BY alumno.idAlumno, asignatura.idAsignatura;
+                    
+        
+                          </h3>
+                          <center><img src="consulta10.png" alt="" class="img-fluid" width="950px" height="950px"></center>
 
 
 
-                  
-                  
+                       
+                    
+                       
 
 
     
