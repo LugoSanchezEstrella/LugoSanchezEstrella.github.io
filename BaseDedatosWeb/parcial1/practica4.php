@@ -24,7 +24,7 @@
         $aciertos++;
         echo "<img src='correcta.jpg' width='50px'><hr>";
     } else {
-        echo "<img src='incorrecta.png' width='50px'><hr>";
+        echo "<img src='incorrecta.jpg' width='50px'><hr>";
     }
     //------FIN de la pregunta 1 ------------------
 
@@ -35,7 +35,7 @@
         $aciertos++;
         echo "<img src='correcta.jpg' width='50px'><hr>";
     } else {
-        echo "<img src='incorrecta.png' width='50px'><hr>";
+        echo "<img src='incorrecta.jpg' width='50px'><hr>";
     }
     //Fin de la pregunta 2 -----------------------------
 
@@ -54,10 +54,10 @@
             $aciertos++;
             echo "<img src='correcta.jpg' width='50px'><hr>";
         } else {
-            echo "<img src='incorrecta.png' width='50px'><hr>";
+            echo "<img src='incorrecta.jpg' width='50px'><hr>";
         }
     } else {
-        echo "<img src='incorrecta.png' width='50px'><hr>";
+        echo "<img src='incorrecta.jpg' width='50px'><hr>";
     }
     //----------FIN pregunta 3 ------------------------------------
 
@@ -69,7 +69,7 @@
             $aciertos++;
             echo "<img src='correcta.jpg' width='50px'><hr>";
         } else {
-            echo "<img src='incorrecta.png' width='50px'><hr>";
+            echo "<img src='incorrecta.jpg' width='50px'><hr>";
         }
     //------FIN de la pregunta 4 ------------------
 
@@ -80,7 +80,7 @@
         $aciertos++;
         echo "<img src='correcta.jpg' width='50px'><hr>";
     } else {
-        echo "<img src='incorrecta.png' width='50px'><hr>";
+        echo "<img src='incorrecta.jpg' width='50px'><hr>";
     }
         
     //Valido pregunta 6 es una función de php que sirve para contar los elementos de un array.
@@ -98,10 +98,10 @@
             $aciertos++;
             echo "<img src='correcta.jpg' width='50px'><hr>";
         } else {
-            echo "<img src='incorrecta.png' width='50px'><hr>";
+            echo "<img src='incorrecta.jpg' width='50px'><hr>";
         }
     } else {
-        echo "<img src='incorrecta.png' width='50px'><hr>";
+        echo "<img src='incorrecta.jpg' width='50px'><hr>";
     }
 
       //Valido pregunta 6 es una función de php que sirve para contar los elementos de un array.
@@ -111,7 +111,7 @@
         $aciertos++;
         echo "<img src='correcta.jpg' width='50px'><hr>";
     } else {
-        echo "<img src='incorrecta.png' width='50px'><hr>";
+        echo "<img src='incorrecta.jpg' width='50px'><hr>";
     }
 
 
@@ -122,7 +122,7 @@
         $aciertos++;
         echo "<img src='correcta.jpg' width='50px'><hr>";
     } else {
-        echo "<img src='incorrecta.png' width='50px'><hr>";
+        echo "<img src='incorrecta.jpg' width='50px'><hr>";
     }
 
     
@@ -133,7 +133,7 @@
         $aciertos++;
         echo "<img src='correcta.jpg' width='50px'><hr>";
     } else {
-        echo "<img src='incorrecta.png' width='50px'><hr>";
+        echo "<img src='incorrecta.jpg' width='50px'><hr>";
     }
         
 
@@ -147,7 +147,7 @@
         $aciertos++;
         echo "<img src='correcta.jpg' width='50px'><hr>";
     } else {
-        echo "<img src='incorrecta.png' width='50px'><hr>";
+        echo "<img src='incorrecta.jpg' width='50px'><hr>";
     }
         
 
