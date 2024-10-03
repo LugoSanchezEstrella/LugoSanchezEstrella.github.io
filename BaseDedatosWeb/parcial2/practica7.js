@@ -93,10 +93,10 @@ function validar(posicion){
                     console.log("GANADOR --->" + cuadro7)
                     pintar(1,4,7);
                 } else if(cuadro7 == cuadro5 && cuadro3== cuadro3){
-                    console.log("GANADOR --->" + cuadro4)
+                    console.log("GANADOR --->" + cuadro7)
                     pintar(7,5,3);
                 } else if(cuadro7 == cuadro8 && cuadro7== cuadro9){
-                    console.log("GANADOR --->" + cuadro4)
+                    console.log("GANADOR --->" + cuadro7)
                     pintar(7,8,9);
                 } 
              break;  
