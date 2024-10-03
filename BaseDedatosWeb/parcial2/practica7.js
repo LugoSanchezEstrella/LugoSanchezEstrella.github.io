@@ -56,7 +56,7 @@ function validar(posicion){
                     console.log("GANADOR --->" + cuadro4)
                     pintar(1,4,7);
                 } else if(cuadro4 == cuadro5 && cuadro4== cuadro6){
-                    console.log("GANADOR --->" + cuadro2)
+                    console.log("GANADOR --->" + cuadro4)
                     pintar(4,5,6);
                 } 
              break;  
