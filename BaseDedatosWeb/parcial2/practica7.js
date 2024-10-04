@@ -134,3 +134,7 @@ function pintar(p1,p2,p3){
     document.getElementById("cuadro"+p2).style.backgroundColor= "#aaf359";
     document.getElementById("cuadro"+p3).style.backgroundColor= "#aaf359";
 }
+
+function reiniciar(){
+    window.location.href = 'practica7.html';
+}
